@@ -66,7 +66,7 @@ APP_KEY=base64:YourGeneratedKeyHere
 APP_DEBUG=false
 APP_ENV=production
 DB_CLIENT=sqlite
-GOOGLE_API_KEY=your-google-api-key
+GEMINI_API_KEY=your-gemini-api-key
 ```
 
 **To generate APP_KEY locally:**
