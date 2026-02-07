@@ -20,6 +20,8 @@ RUN apk update && apk add --no-cache \
     libpng-dev \
     jpeg-dev \
     freetype-dev \
+    libxml2-dev \
+    oniguruma-dev \
     sqlite \
     sqlite-dev \
     pkgconfig \
