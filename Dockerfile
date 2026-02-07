@@ -15,11 +15,11 @@ RUN npm run build
 FROM php:8.2-fpm-alpine
 
 # Install system dependencies
-RUN apk add --no-cache \
+RUN apk update && apk add --no-cache \
     curl \
     libpng-dev \
-    libjpeg-turbo-dev \
-    libfreetype-dev \
+    jpeg-dev \
+    freetype-dev \
     zip \
     unzip \
     git \
