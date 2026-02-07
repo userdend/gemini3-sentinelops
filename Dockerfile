@@ -20,6 +20,7 @@ RUN apk update && apk add --no-cache \
     libpng-dev \
     jpeg-dev \
     freetype-dev \
+    sqlite \
     sqlite-dev \
     pkgconfig \
     zip \
@@ -33,11 +34,6 @@ RUN docker-php-ext-install -j$(nproc) \
     pdo_sqlite \
     gd \
     bcmath \
-    ctype \
-    fileinfo \
-    json \
-    mbstring \
-    tokenizer \
     xml
 
 # Install Composer
