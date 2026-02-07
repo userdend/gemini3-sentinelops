@@ -12,7 +12,7 @@ COPY . .
 RUN npm run build
 
 # Stage 2: PHP application
-FROM php:8.2-fpm-alpine
+FROM php:8.4-fpm-alpine
 
 # Install system dependencies
 RUN apk update && apk add --no-cache \
