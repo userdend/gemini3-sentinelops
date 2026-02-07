@@ -64,6 +64,9 @@ RUN mkdir -p database && chmod -R 775 database && chown -R www-data:www-data dat
 # Create supervisor log directory
 RUN mkdir -p /var/log/supervisor && chmod -R 775 /var/log/supervisor
 
+# Create nginx log directory
+RUN mkdir -p /var/log/nginx && chmod -R 775 /var/log/nginx
+
 # Copy supervisor configuration
 COPY docker/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
