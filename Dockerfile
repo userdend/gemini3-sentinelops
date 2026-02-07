@@ -61,6 +61,9 @@ RUN mkdir -p storage/logs storage/framework/cache storage/framework/sessions sto
 # Ensure database directory is writable
 RUN mkdir -p database && chmod -R 775 database && chown -R www-data:www-data database
 
+# Create supervisor log directory
+RUN mkdir -p /var/log/supervisor && chmod -R 775 /var/log/supervisor
+
 # Copy supervisor configuration
 COPY docker/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
