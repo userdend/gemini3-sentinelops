@@ -20,6 +20,8 @@ RUN apk update && apk add --no-cache \
     libpng-dev \
     jpeg-dev \
     freetype-dev \
+    sqlite-dev \
+    pkg-config \
     zip \
     unzip \
     git \
