@@ -16,6 +16,7 @@ FROM php:8.4-fpm-alpine
 
 # Install system dependencies
 RUN apk update && apk add --no-cache \
+    bash \
     curl \
     libpng-dev \
     jpeg-dev \
@@ -69,12 +70,13 @@ COPY docker/default.conf /etc/nginx/conf.d/default.conf
 
 # Copy entrypoint script
 COPY docker/entrypoint.sh /usr/local/bin/entrypoint.sh
-RUN chmod +x /usr/local/bin/entrypoint.sh && \
-    sed -i 's/\r$//' /usr/local/bin/entrypoint.sh
+RUN dos2unix /usr/local/bin/entrypoint.sh || sed -i 's/\r$//' /usr/local/bin/entrypoint.sh && \
+    chmod +x /usr/local/bin/entrypoint.sh && \
+    ls -la /usr/local/bin/entrypoint.sh
 
 # Expose port
 EXPOSE 8080
 
-ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
+ENTRYPOINT ["/bin/bash", "/usr/local/bin/entrypoint.sh"]
 
 CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
