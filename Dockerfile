@@ -21,7 +21,7 @@ RUN apk update && apk add --no-cache \
     jpeg-dev \
     freetype-dev \
     sqlite-dev \
-    pkg-config \
+    pkgconfig \
     zip \
     unzip \
     git \
