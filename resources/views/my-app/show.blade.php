@@ -49,7 +49,7 @@
                                 <!--begin::Row-->
                                 <div class="row">
                                     <!--begin::Col-->
-                                    <div class="col-12 mb-2">
+                                    <div class="col-9">
                                         <select name="chaos-profile" id="chaos-profile" class="form-select">
                                             <option disabled selected>Select a profile</option>
                                             @foreach ($profiles as $p)
@@ -59,8 +59,8 @@
                                     </div>
                                     <!--end::Col-->
                                     <!--begin::Col-->
-                                    <div class="col-12 mb-2">
-                                        <button id="dispatch-job" class="btn btn-sm btn-primary">Dispatch</button>
+                                    <div class="col-3">
+                                        <button id="dispatch-job" class="btn btn-primary">Dispatch</button>
                                     </div>
                                     <!--end::Col-->
                                 </div>
