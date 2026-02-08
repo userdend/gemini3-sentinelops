@@ -47,9 +47,9 @@
                             <!--begin::Body-->
                             <div class="card-body">
                                 <!--begin::Row-->
-                                <div class="row">
+                                <div class="row g-2">
                                     <!--begin::Col-->
-                                    <div class="col-9">
+                                    <div class="col-12 col-lg-9">
                                         <select name="chaos-profile" id="chaos-profile" class="form-select">
                                             <option disabled selected>Select a profile</option>
                                             @foreach ($profiles as $p)
@@ -59,7 +59,7 @@
                                     </div>
                                     <!--end::Col-->
                                     <!--begin::Col-->
-                                    <div class="col-3">
+                                    <div class="col-12 col-lg-3 d-grid">
                                         <button id="dispatch-job" class="btn btn-primary">Dispatch</button>
                                     </div>
                                     <!--end::Col-->
