@@ -102,11 +102,11 @@
                                                     </div>
                                                     <div class="btn-group" role="group">
                                                         <a href="{{ route('mp.resolved', ['id' => $p->failure_log_id]) }}"
-                                                            id="resolve-btn" class="btn btn-outline-primary">
+                                                            class="btn btn-outline-primary resolve-btn">
                                                             Resolved
                                                         </a>
                                                         <a href="{{ route('mp.escalated', ['id' => $p->failure_log_id]) }}"
-                                                            id="escalate-btn" class="btn btn-outline-danger">
+                                                            class="btn btn-outline-danger escalate-btn">
                                                             Escalate
                                                         </a>
                                                     </div>
@@ -134,8 +134,10 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script>
-        $('#resolve-btn').on('click', function(e) {
+        $(document).on('click', '.resolve-btn', function(e) {
             e.preventDefault();
+
+            const href = $(this).attr('href');
 
             Swal.fire({
                 title: "Mark this incident as resolved?",
@@ -152,8 +154,10 @@
             })
         });
 
-        $('#escalate-btn').on('click', function(e) {
+        $(document).on('click', '.escalate-btn', function(e) {
             e.preventDefault();
+
+            const href = $(this).attr('href');
 
             Swal.fire({
                 title: "Mark this incident as escalated?",
