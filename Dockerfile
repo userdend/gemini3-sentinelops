@@ -59,7 +59,7 @@ RUN mkdir -p storage/logs storage/framework/cache storage/framework/sessions sto
     chown -R www-data:www-data storage bootstrap/cache
 
 # Ensure database directory is writable
-RUN mkdir -p database && chmod -R 775 database && chown -R www-data:www-data database
+RUN mkdir -p database && chmod -R 777 database && chown -R www-data:www-data database
 
 # Create supervisor log directory
 RUN mkdir -p /var/log/supervisor && chmod -R 775 /var/log/supervisor
