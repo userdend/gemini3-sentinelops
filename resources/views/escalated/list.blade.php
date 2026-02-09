@@ -69,7 +69,7 @@
                                                     <td>{{ $log->created_at }}</td>
                                                     <td>
                                                         <a href="{{ route('mp.resolved', ['id' => $log->id]) }}"
-                                                            class="btn btn-outline-primary btn-resolve">
+                                                            class="btn btn-outline-primary resolve-btn">
                                                             Resolved
                                                         </a>
                                                     </td>
