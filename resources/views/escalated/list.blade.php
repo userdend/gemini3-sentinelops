@@ -69,7 +69,7 @@
                                                     <td>{{ $log->created_at }}</td>
                                                     <td>
                                                         <a href="{{ route('mp.resolved', ['id' => $log->id]) }}"
-                                                            id="resolve-btn" class="btn btn-outline-primary">
+                                                            class="btn btn-outline-primary btn-resolve">
                                                             Resolved
                                                         </a>
                                                     </td>
@@ -97,8 +97,10 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script>
-        $('#resolve-btn').on('click', function(e) {
+        $('.resolve-btn').on('click', function(e) {
             e.preventDefault();
+
+            const href = $(this).attr('href');
 
             Swal.fire({
                 title: "Mark this incident as resolved?",
